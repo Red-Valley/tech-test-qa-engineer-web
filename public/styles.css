@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: #f6f7fb; color: #1d2333; overflow-x: hidden; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 20px; background: #1d2333; color: #fff; }
+.topbar h1 { font-size: 20px; margin: 0; }
+.topbar-right { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+button { cursor: pointer; border: 0; border-radius: 6px; padding: 8px 12px; background: #4b5bdc; color: #fff; font: inherit; }
+button:disabled { background: #b8bccb; cursor: not-allowed; }
+input, select { padding: 8px; border: 1px solid #c9cdd9; border-radius: 6px; font: inherit; }
+main { padding: 20px; max-width: 1100px; margin: 0 auto; }
+.filters { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.filters input { flex: 1; min-width: 200px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.card { background: #fff; border-radius: 10px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.08); display: flex; flex-direction: column; gap: 6px; }
+.card h3 { margin: 0; font-size: 16px; }
+.card .meta { color: #677087; font-size: 13px; }
+.card .price { font-weight: 700; font-size: 18px; }
+.badge { font-size: 12px; color: #b3261e; }
+.pager { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 20px; }
+.cart { position: fixed; top: 64px; right: 0; height: calc(100vh - 64px); width: 520px; background: #fff; box-shadow: -4px 0 16px rgba(0,0,0,.15); padding: 16px 20px; overflow-y: auto; }
+.cart.hidden { display: none; }
+.cart-head { display: flex; justify-content: space-between; align-items: center; }
+.cart-head button { background: transparent; color: #1d2333; font-size: 24px; }
+#cart-items, #order-list { list-style: none; padding: 0; }
+#cart-items li, #order-list li { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid #eceef4; }
+#cart-items input { width: 64px; }
+.row { display: flex; gap: 8px; }
+.totals { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; }
+.totals dd { margin: 0; text-align: right; }
+.checkout { display: flex; gap: 8px; margin-top: 12px; width: 480px; }
+.checkout input { flex: 1; }
+.msg { min-height: 1.2em; font-size: 14px; }
+.msg.error { color: #b3261e; }
+.msg.ok { color: #1b7f3b; }

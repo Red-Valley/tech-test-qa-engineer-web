@@ -1,0 +1,11 @@
+{
+  "name": "pixel-market",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pixel Market - system under test for the RVS QA Engineer technical assessment",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "reset": "node --no-warnings server.js --reset"
+  },
+  "engines": { "node": ">=22.13" }
+}

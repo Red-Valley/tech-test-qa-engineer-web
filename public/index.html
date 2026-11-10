@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixel Market</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Pixel Market</h1>
+    <div class="topbar-right">
+      <label>Signed in as
+        <select id="user-select" data-testid="user-select"></select>
+      </label>
+      <button id="orders-btn" data-testid="orders-button">My orders</button>
+      <button id="cart-btn" data-testid="cart-button">Cart (<span id="cart-count" data-testid="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="filters">
+      <input id="search" data-testid="search-input" type="search" placeholder="Search games or developers" />
+      <select id="sort" data-testid="sort-select">
+        <option value="title:asc">Title A-Z</option>
+        <option value="title:desc">Title Z-A</option>
+        <option value="price:asc">Price: low to high</option>
+        <option value="price:desc">Price: high to low</option>
+        <option value="rating:desc">Top rated</option>
+      </select>
+    </section>
+
+    <section id="products" class="grid" data-testid="product-grid"></section>
+
+    <nav class="pager">
+      <button id="prev" data-testid="prev-page">Previous</button>
+      <span id="page-info" data-testid="page-info"></span>
+      <button id="next" data-testid="next-page">Next</button>
+    </nav>
+  </main>
+
+  <aside id="cart" class="cart hidden" data-testid="cart-panel">
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button id="close-cart" aria-label="Close cart">&times;</button>
+    </div>
+    <ul id="cart-items" data-testid="cart-items"></ul>
+    <form id="coupon-form" class="row">
+      <input id="coupon" data-testid="coupon-input" placeholder="Coupon code" />
+      <button data-testid="apply-coupon">Apply</button>
+    </form>
+    <p class="msg" id="coupon-msg" data-testid="coupon-message"></p>
+    <dl class="totals">
+      <dt>Subtotal</dt><dd id="subtotal" data-testid="subtotal">$0.00</dd>
+      <dt>Discount</dt><dd id="discount" data-testid="discount">-$0.00</dd>
+      <dt>Total</dt><dd id="total" data-testid="total">$0.00</dd>
+    </dl>
+    <form id="checkout-form" class="checkout">
+      <input id="email" data-testid="email-input" type="text" placeholder="Email for receipt" />
+      <button data-testid="checkout-button">Place order</button>
+    </form>
+    <p class="msg" id="checkout-msg" data-testid="checkout-message"></p>
+  </aside>
+
+  <aside id="orders" class="cart hidden" data-testid="orders-panel">
+    <div class="cart-head">
+      <h2>My orders</h2>
+      <button id="close-orders" aria-label="Close orders">&times;</button>
+    </div>
+    <ul id="order-list" data-testid="order-list"></ul>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
