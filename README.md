@@ -70,6 +70,22 @@ List every defect you find. Each bug needs:
 
 **Order the list by severity.** Quality matters more than quantity.
 
+Write each bug in `BUGS.md` like a GitHub issue, using this template (do **not** open issues on this repository):
+
+```markdown
+## BUG-01: <short title>
+- **Severity:** Critical / High / Medium / Low, plus one line on why
+- **Environment:** browser + version and viewport, or API
+
+**Steps to reproduce**
+1. ...
+2. ...
+
+**Expected:** ...
+**Actual:** ...
+**Evidence:** screenshot, curl command or test name
+```
+
 ### 2. Test design: `TEST_CASES.md`
 
 - Write test cases for the **cart + coupon + checkout** flow, in whatever format you use at work (a table or Gherkin are both fine). Cover the happy path, boundaries and negative cases.
@@ -82,7 +98,7 @@ In the framework of your choice (**Playwright, Cypress, Selenium WebDriver or py
 - write at least **3 UI tests** and **3 API tests**,
 - make the tests independent and repeatable, using `/api/reset` or your own setup,
 - you **may** write tests that fail because of a real bug, as long as you mark them clearly (for example `test.fail()`, `xfail` or a comment linking to the bug in `BUGS.md`),
-- add the commands to install and run the tests to your PR description.
+- add the commands to install and run the tests to your submission email.
 
 **Bonus:** a GitHub Actions workflow that starts the app and runs your tests.
 
@@ -118,14 +134,16 @@ We expect you to use AI tools. We want to see **how** you used them:
 | Test design and coverage thinking | 15% |
 | Use of AI tools (`AI_WORKFLOW.md`) | 15% |
 | Data validation (SQL) | 5% |
-| Communication (PR description, README, trade-offs) | 10% |
+| Communication (submission email, README, trade-offs) | 10% |
 
 ## Submission
 
-1. **Fork** this repository.
-2. Create a branch named `submission/<your-name>`.
-3. Add your deliverables (`BUGS.md`, `TEST_CASES.md`, `SQL.md`, `AI_WORKFLOW.md` and `tests/`).
-4. Open a **Pull Request to `main`** that includes:
+> ⚠️ **Do not fork this repository, and do not open Pull Requests or Issues here.** This repository is public, so anything posted on it is visible to other candidates.
+
+1. Create **your own private repository**: click **Use this template → Create a new repository** and choose **Private**, or clone this repository and push it to a new private repository. Do not use a fork.
+2. Add your deliverables (`BUGS.md`, `TEST_CASES.md`, `SQL.md`, `AI_WORKFLOW.md` and `tests/`).
+3. Send your submission **by email** to the recruiter who sent you this test, before the deadline they gave you. Include:
+   - the link to your private repository (with access granted to the reviewers the recruiter tells you), **or** a `.zip` of your repository,
    - the time you spent,
    - how to install and run your tests,
    - the trade-offs you made and what you would do with more time.
