@@ -138,14 +138,22 @@ We expect you to use AI tools. We want to see **how** you used them:
 
 ## Submission
 
+**Deadline: 72 hours** from the moment you receive this test.
+
 > ⚠️ **Do not fork this repository, and do not open Pull Requests or Issues here.** This repository is public, so anything posted on it is visible to other candidates.
 
-1. Create **your own private repository**: click **Use this template → Create a new repository** and choose **Private**, or clone this repository and push it to a new private repository. Do not use a fork.
+1. Put your work in **your own private repository**: click **Use this template → Create a new repository** and choose **Private**, or clone this repository and push it to a new private repository. Do not use a fork.
 2. Add your deliverables (`BUGS.md`, `TEST_CASES.md`, `SQL.md`, `AI_WORKFLOW.md` and `tests/`).
-3. Send your submission **by email** to the recruiter who sent you this test, before the deadline they gave you. Include:
-   - the link to your private repository (with access granted to the reviewers the recruiter tells you), **or** a `.zip` of your repository,
-   - the time you spent,
-   - how to install and run your tests,
-   - the trade-offs you made and what you would do with more time.
+3. Invite the GitHub user **`aatrv`** as a collaborator on your private repository (Settings → Collaborators).
+4. Send an email:
+   - **To:** almer.ibarra@rvstaffing.com
+   - **CC:** maria.leon@rvstaffing.com
+   - **Subject:** `QA Engineer - <Your full name>` (for example `QA Engineer - Jane Doe`)
+   - **Attachments:** your markdown files (`BUGS.md`, `TEST_CASES.md`, `SQL.md` and `AI_WORKFLOW.md`). Do **not** attach a `.zip`: email providers block archives that contain code.
+   - **Body:**
+     - the link to your private repository,
+     - the time you spent,
+     - how to install and run your tests,
+     - the trade-offs you made and what you would do with more time.
 
 Good luck, and have fun breaking things. 🐞
